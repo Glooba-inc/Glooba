@@ -3,55 +3,87 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#030407" />
-  <meta name="description" content="Glooba is an independent app studio building curious things for the internet." />
-  <title>Glooba — We make apps</title>
+  <meta name="theme-color" content="#FAF6EE" />
+  <meta name="description" content="Glooba is a small app studio. FocusPals helps you stay in charge of distracting apps, with a friendly focus coach on your phone." />
+  <title>Glooba — FocusPals</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <canvas id="stars" aria-hidden="true"></canvas>
-  <div class="nebula" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
-    <!-- OPTION A: wordmark only. Comment this out if you prefer OPTION B. -->
-    <a class="brand brand-wordmark" href="#" aria-label="Glooba home">GLOOBA</a>
-
-    <!-- OPTION B: mascot + wordmark. Uncomment this block and comment OPTION A above. -->
-    <!--
-    <a class="brand brand-with-mascot" href="#" aria-label="Glooba home">
-      <img src="glooba-mascot.png" alt="" />
-      <span>GLOOBA</span>
+    <a class="brand" href="index.html" aria-label="Glooba home">
+      <img src="glooba-mascot.png" alt="" width="48" height="48" />
+      <span>Glooba</span>
     </a>
-    -->
+    <nav class="nav" aria-label="Primary">
+      <a href="#focuspals">FocusPals</a>
+      <a href="legal.html">Privacy &amp; terms</a>
+      <a href="mailto:info@glooba.dev">Contact</a>
+    </nav>
   </header>
 
-  <main>
-    <section class="hero">
+  <main id="main">
+    <section class="hero" id="focuspals" aria-labelledby="hero-title">
       <div class="copy">
-        <p class="eyebrow"><span class="pulse"></span> Somewhere in development</p>
-        <h1>We make apps.<br><span>Something is taking shape.</span></h1>
-        <p class="intro">Glooba is an independent app studio. We design and build our own ideas, one curious product at a time.</p>
-        <div class="status"><span>01</span><div></div><p>FIRST PROJECT<br><strong>IN DEVELOPMENT</strong></p></div>
+        <p class="eyebrow"><span class="pulse" aria-hidden="true"></span> An app from Glooba</p>
+        <h1 id="hero-title">FocusPals</h1>
+        <p class="tagline">A friendly focus coach for your phone. Set limits on the apps that pull you in, keep a streak going, and stay in charge of your time.</p>
+        <p class="soon"><span class="soon-badge">Coming soon to Google Play</span></p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="legal.html">Privacy &amp; terms</a>
+          <a class="btn btn-ghost" href="mailto:info@glooba.dev">info@glooba.dev</a>
+        </div>
       </div>
 
-      <div class="mascot-zone" aria-label="Mr. Glooba floating through space">
-        <div class="orbit orbit-one"></div>
-        <div class="orbit orbit-two"></div>
+      <div class="mascot-zone">
+        <div class="mascot-glow" aria-hidden="true"></div>
         <div class="mascot-floater" id="mascotFloater">
-          <div class="mascot-tilt" id="mascotTilt">
-            <img src="glooba-mascot.png" alt="Mr. Glooba, the Glooba mascot" draggable="false" />
-          </div>
+          <img src="glooba-mascot.png" alt="Mr. Glooba, the Glooba mascot" width="520" height="520" draggable="false" />
         </div>
-        <span class="tiny-star s1">✦</span><span class="tiny-star s2">·</span><span class="tiny-star s3">✧</span>
+      </div>
+    </section>
+
+    <section class="features" aria-labelledby="features-title">
+      <h2 id="features-title">How FocusPals helps</h2>
+      <p class="features-lead">Simple tools, a little encouragement, and data that stays on your phone.</p>
+      <ul class="feature-grid">
+        <li class="feature-card">
+          <span class="feature-emoji" aria-hidden="true">📱</span>
+          <h3>Pick your distractions</h3>
+          <p>Choose the apps you want to manage and set a daily open limit and a time limit that feel right for you.</p>
+        </li>
+        <li class="feature-card">
+          <span class="feature-emoji" aria-hidden="true">🔥</span>
+          <h3>Build a streak</h3>
+          <p>When you stay within your limits, your streak grows. A gentle prompt helps you pause before a habit takes over.</p>
+        </li>
+        <li class="feature-card">
+          <span class="feature-emoji" aria-hidden="true">🪙</span>
+          <h3>Earn coins</h3>
+          <p>Stick with your goals and earn coins you can use for upgrades and rewards as FocusPals grows.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="studio" aria-labelledby="studio-title">
+      <div class="studio-card">
+        <p class="eyebrow">The studio</p>
+        <h2 id="studio-title">Built by a small team with a big soft spot for focus.</h2>
+        <p>Glooba is an independent app studio. We design and build our own ideas, one careful product at a time. FocusPals is our first app — made to help you use your phone more intentionally, without ads or dark patterns.</p>
+        <p><a href="mailto:info@glooba.dev">Say hello at info@glooba.dev</a></p>
       </div>
     </section>
   </main>
 
   <footer>
-    <span>© <span id="year"></span> GLOOBA</span>
+    <span>© <span id="year"></span> Glooba</span>
     <a href="mailto:info@glooba.dev">info@glooba.dev</a>
     <a href="legal.html">Privacy &amp; terms</a>
-    <span class="coordinates">BUILDING FROM EARTH</span>
+    <span class="coordinates">Building from Earth</span>
   </footer>
 
   <script src="script.js"></script>
